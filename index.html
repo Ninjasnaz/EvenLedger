@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#081323">
+    <meta name="description" content="A considered way to split the bill. EvenLedger makes room for good company and a fair share.">
+    <title>EvenLedger | Every share, settled.</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23081323'/%3E%3Cpath d='M11 12h18M11 20h13M11 28h18' stroke='%23d1ddec' stroke-width='3'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./styles.css?v=navy-silver-2">
+    <script type="module" src="./app.js?v=navy-silver-1"></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="./" aria-label="EvenLedger home">
+          <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><rect x=".5" y=".5" width="35" height="35" rx="9"/><path d="M10 10h16M10 18h12M10 26h16"/></svg>
+          <span>EvenLedger<span class="brand-period">.</span></span>
+        </a>
+        <span class="header-note">GOOD COMPANY. FAIR SHARES.</span>
+        <span class="currency-badge"><span aria-hidden="true">$</span> USD</span>
+      </header>
+
+      <main id="main-content">
+        <section class="intro" aria-labelledby="page-title">
+          <div class="intro-copy">
+            <p class="eyebrow"><span class="silver-rule" aria-hidden="true"></span> FOR EVERY SEAT AT THE TABLE</p>
+            <h1 id="page-title">Good food.<br><em>Great company.</em></h1>
+            <p class="intro-description">Split the bill, leave a tip, and get back to the conversation.</p>
+            <p class="intro-signature"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="22" cy="20" r="11"/><circle cx="22" cy="20" r="7"/><path d="M5 7v9m3-9v9m-6-9v9m0 0h6m-3 0v17M37 7v26m0-26c-4 4-4 10 0 11"/></svg> A considered finish to a shared meal.</p>
+          </div>
+          <figure class="restaurant-scene">
+            <img src="./assets/restaurant-evening.png" alt="Pasta, white porcelain plates, silver cutlery, and glassware at a navy restaurant table." width="1536" height="1024" fetchpriority="high">
+            <figcaption><span class="scene-eyebrow">PULL UP A CHAIR</span><span class="scene-caption">The best things<br>are shared.</span></figcaption>
+            <button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="false" aria-label="Pause restaurant animation"><svg class="pause-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 4v8M11 4v8"/></svg><svg class="play-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="m5 3 7 5-7 5Z"/></svg><span id="motion-label">Pause motion</span></button>
+          </figure>
+        </section>
+
+        <div class="calculator-layout">
+          <section class="entry-panel" aria-labelledby="details-title">
+            <div class="section-heading"><h2 id="details-title">The details</h2><span class="section-note">Your table, your numbers.</span></div>
+            <form id="split-form" novalidate>
+              <div class="field-group">
+                <div class="label-row"><label for="bill">Bill amount</label><span class="field-note">Including any tax or fees</span></div>
+                <div class="input-wrap bill-input"><span class="input-prefix" aria-hidden="true">$</span><input id="bill" name="bill" type="number" inputmode="decimal" value="0" min="0.01" max="99999.99" step="0.01" required aria-describedby="bill-hint bill-error"><span class="input-suffix" aria-hidden="true">USD</span></div>
+                <p class="field-hint" id="bill-hint">Enter the amount before adding a tip.</p>
+                <p class="field-error" id="bill-error" hidden></p>
+              </div>
+
+              <div class="field-group">
+                <div class="label-row"><label for="tip">Leave a tip</label><span class="field-note">A little appreciation</span></div>
+                <div class="input-wrap"><input id="tip" name="tip" type="number" inputmode="decimal" value="15" min="0" step="0.01" required aria-describedby="tip-hint tip-error"><span class="input-suffix" aria-hidden="true">%</span></div>
+                <div class="presets" role="group" aria-label="Tip percentage shortcuts">
+                  <button type="button" class="preset" data-field="tip" data-value="15" aria-pressed="true">15%</button>
+                  <button type="button" class="preset" data-field="tip" data-value="18" aria-pressed="false">18%</button>
+                  <button type="button" class="preset" data-field="tip" data-value="20" aria-pressed="false">20%</button>
+                  <button type="button" class="preset" data-field="tip" data-value="22" aria-pressed="false">22%</button>
+                </div>
+                <p class="field-hint" id="tip-hint">Choose a shortcut or enter your own percentage.</p>
+                <p class="field-error" id="tip-error" hidden></p>
+              </div>
+
+              <div class="field-group people-group">
+                <div class="label-row"><label for="people">At the table</label><span class="field-note">Number of people</span></div>
+                <div class="input-wrap"><svg class="people-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M16 4a3 3 0 0 1 0 6M18 13a5 5 0 0 1 3 5v2"/></svg><input id="people" name="people" type="number" inputmode="numeric" value="2" min="1" step="1" required aria-describedby="people-hint people-error"><span class="input-suffix" aria-hidden="true">people</span></div>
+                <div class="presets" role="group" aria-label="People count shortcuts">
+                  <button type="button" class="preset" data-field="people" data-value="2" aria-pressed="true">2</button>
+                  <button type="button" class="preset" data-field="people" data-value="3" aria-pressed="false">3</button>
+                  <button type="button" class="preset" data-field="people" data-value="4" aria-pressed="false">4</button>
+                  <button type="button" class="preset" data-field="people" data-value="5" aria-pressed="false">5</button>
+                  <button type="button" class="preset" data-field="people" data-value="8" aria-pressed="false">8</button>
+                </div>
+                <p class="field-hint" id="people-hint">Everyone included. Any positive whole number.</p>
+                <p class="field-error" id="people-error" hidden></p>
+              </div>
+
+              <div class="form-actions"><button class="calculate-button" type="submit" disabled>Calculate split <span aria-hidden="true">↗</span></button><button class="reset-button" type="reset">Reset</button></div>
+              <p class="form-message" id="form-message" role="status" aria-atomic="true">Tip applies to the full bill amount you enter.</p>
+              <noscript><p class="field-error">Enable JavaScript to calculate your split.</p></noscript>
+            </form>
+          </section>
+
+          <section class="summary-panel" aria-labelledby="summary-title">
+            <div class="summary-heading"><p class="eyebrow">THE BREAKDOWN</p><span class="summary-symbol" aria-hidden="true">÷</span></div>
+            <h2 id="summary-title">Every share,<br> settled.</h2>
+            <div id="summary-results" class="summary-results" aria-live="polite" aria-atomic="true">
+              <div class="per-person"><span class="summary-label" id="share-label">PER PERSON</span><p class="share-amount" id="share-amount"><span>$</span><span id="share-dollars">0</span><span class="cents" id="share-cents">.00</span></p><p class="summary-explanation" id="share-explanation">Your split will appear here after you calculate.</p><ul class="share-allocation" id="share-allocation" hidden></ul></div>
+              <dl class="summary-lines"><div><dt>Bill amount</dt><dd id="bill-result">$0.00</dd></div><div><dt>Tip amount</dt><dd id="tip-result">$0.00</dd></div><div class="total-line"><dt>Total to share</dt><dd id="total-result">$0.00</dd></div></dl>
+            </div>
+            <p class="rounding-note"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="m6.5 10 2.3 2.3 4.7-4.7"/></svg>Every cent accounted for.</p>
+          </section>
+        </div>
+
+        <p class="closing-note"><span aria-hidden="true">✧</span> Here’s to good company.</p>
+      </main>
+      <footer class="site-footer"><span>EvenLedger<span class="brand-period">.</span> <span class="footer-divider">/</span> A fair way to finish.</span><span>Calculated with care.</span></footer>
+    </div>
+  </body>
+</html>

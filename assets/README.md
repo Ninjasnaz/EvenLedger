@@ -1,0 +1,7 @@
+# Restaurant image
+
+`restaurant-evening.png` was created October 21, 2026 with the built-in image generation tool in default tool mode. The selected PNG was copied into this project. It is illustrative restaurant imagery, not a photograph of a named venue. No external image service is called by the app.
+
+## Final generation prompt
+
+Use case: photorealistic-natural. Asset type: restaurant photography for the hero of EvenLedger, an elegant tip and bill splitting website. Primary request: an inviting, prestigious restaurant scene in a navy and silver visual palette. Subject: a beautifully set dinner table for friends with white porcelain plates of fresh pasta, polished silver cutlery, clear stemware, folded navy linen napkins, subtle green herbs. Scene: intimate upscale modern restaurant at blue hour with deep navy banquette seating and softly blurred restaurant windows in the background. Composition: landscape editorial photograph, 3:2 aspect ratio, table-level three-quarter view, appetizing dishes and silverware clearly visible, enough background to feel like a real restaurant; no people needed. Lighting: cinematic but natural, cool blue evening ambience balanced by neutral white light on the food and plates, rich dark navy shadows, crisp silver highlights, realistic textures. Color palette: midnight navy, cool silver, clean white, natural food colors. Avoid gold fixtures, yellow/orange lighting, brown/olive color casts, text, logos, watermarks, UI elements, collages, or a photograph of a website. High-end hospitality editorial photography.
