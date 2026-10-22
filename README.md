@@ -4,6 +4,8 @@
 
 EvenLedger is a small web app for splitting a restaurant bill with friends. Instead of passing a phone around doing mental math, you enter the bill, pick a tip, say how many people are at the table, and get an exact share for everyone — to the cent.
 
+You can try out the live site at https://ninjasnaz.github.io/EvenLedger.
+
 The goal is simple: the bill shouldn't interrupt a good evening. Let the app handle the arithmetic so the table can get back to the conversation, the food, and the company.
 
 ## What it does
