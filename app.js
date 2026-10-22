@@ -140,11 +140,3 @@ form.addEventListener('submit', (event) => {
 
 syncShortcuts();
 form.querySelector('[type="submit"]').disabled = false;
-
-const motionToggle = document.querySelector('#motion-toggle');
-motionToggle.addEventListener('click', () => {
-  const paused = document.body.classList.toggle('motion-paused');
-  motionToggle.setAttribute('aria-pressed', String(paused));
-  motionToggle.setAttribute('aria-label', paused ? 'Play restaurant animation' : 'Pause restaurant animation');
-  document.querySelector('#motion-label').textContent = paused ? 'Play motion' : 'Pause motion';
-});
