@@ -45,7 +45,7 @@ h1 em { font-weight: 400; color: #c6d6eb; }
 .intro-signature svg { width: 32px; height: 32px; flex: 0 0 32px; fill: none; stroke: #a8bdd8; stroke-width: 1.2; stroke-linecap: round; }
 .restaurant-scene { position: relative; margin: 0; min-width: 0; height: 302px; overflow: hidden; isolation: isolate; border: 1px solid #4b6280; border-radius: 15px 52px 15px 15px; background: #14283f; box-shadow: 0 16px 50px #020b1740; }
 .restaurant-scene::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, #07122200 38%, #071222cf 100%); }
-.restaurant-scene img { display: block; width: 100%; height: 100%; object-fit: cover; animation: dinner-drift 22s ease-in-out infinite alternate; transform-origin: 50% 65%; }
+.restaurant-scene img { display: block; width: 100%; height: 100%; object-fit: cover; animation: dinner-drift 16s linear infinite alternate; transform-origin: 52% 62%; will-change: transform; }
 .restaurant-scene figcaption { position: absolute; left: 24px; bottom: 24px; z-index: 2; text-shadow: 0 2px 15px #0008; }
 .scene-eyebrow { display: block; margin-bottom: 9px; font-size: 11px; font-weight: 600; letter-spacing: 2px; color: #d6e0ef; }
 .scene-caption { font: 31px/1.1 var(--serif); letter-spacing: -.6px; color: #fff; }
@@ -129,7 +129,7 @@ label { font-size: 15px; font-weight: 500; }
 .designer-credit { margin: 0; font: 22px/1.25 var(--script); color: var(--silver); }
 .footer-divider { margin: 0 10px; color: #7f96b4; }
 
-@keyframes dinner-drift { from { transform: scale(1.01); } to { transform: scale(1.1) translateY(-1%); } }
+@keyframes dinner-drift { from { transform: scale(1.05) translate3d(0.5%, 0.5%, 0); } to { transform: scale(1.24) translate3d(-2.5%, -2%, 0); } }
 @keyframes arrival { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 950px) {
