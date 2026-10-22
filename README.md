@@ -48,4 +48,4 @@ node --test calculator.test.mjs
 
 ## A note on the design
 
-Navy and silver, with a slowly drifting restaurant scene and a Pause control for people who prefer their pages still. All of it is handled with CSS, so it works without any image processing or animation library.
+Navy and silver, with a slowly drifting restaurant scene. All of it is handled with CSS, so it works without any image processing or animation library. Visitors who ask their device to reduce motion get a still image.
